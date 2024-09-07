@@ -3,7 +3,7 @@
   It has a few basic features:
     - Home link
     - Link link
-    - Disabled link
+    - New Button link
     - Dropdown menu
     - Search bar
 */
@@ -14,50 +14,45 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  const handleToggleDropdown = () => {
+    setDropdownOpen((prevOpen) => !prevOpen);
   };
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Navbar</div>
+      <div className="navbar-brand">
+        <a href="#">Navbar</a>
+      </div>
       <ul className="navbar-nav">
         <li className="nav-item">
           <a href="#" className="nav-link">
-            Home
+            Link 1
           </a>
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
-            Link
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="#" className="nav-link disabled">
-            Disabled
+            Link 2
           </a>
         </li>
         <li className="nav-item dropdown">
           <a
             href="#"
             className="nav-link dropdown-toggle"
-            onClick={toggleDropdown}
+            onClick={handleToggleDropdown}
           >
             Dropdown
           </a>
-          {dropdownOpen && (
-            <ul className="dropdown-menu">
-              <li className="dropdown-item">
-                <a href="#">Action</a>
-              </li>
-              <li className="dropdown-item">
-                <a href="#">Another action</a>
-              </li>
-              <li className="dropdown-item">
-                <a href="#">Something else here</a>
-              </li>
-            </ul>
-          )}
+          <ul className={`dropdown-content ${dropdownOpen ? 'open' : ''}`}>
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+          </ul>
         </li>
       </ul>
       <div className="navbar-search">
