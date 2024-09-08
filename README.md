@@ -1,4 +1,6 @@
-# This branch has code for front end components:
-## 1. Navbar:
-    The navbar looks like this in the latest commit on this branch:
-![alt text](Images/third_navbar.png)
+# This branch has code for front end components:  
+### Below are the screenshots of the current state of components
+## 1. Navigation bar:
+![navbar image](Images/third_navbar.png)
+## 2. Footer:
+![footer image](Images/footer.png)
