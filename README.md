@@ -1,1 +1,1 @@
-# FSD_Mini_Project
+# Online Event Management System
