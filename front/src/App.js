@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './footer';
 
 import Navbar from './header_navbar'
 
@@ -9,6 +10,7 @@ export default function App() {
       <div className='App dark'>
         {/* rest of your app content */}
       </div>
+      <Footer />
     </>
   );
 }
