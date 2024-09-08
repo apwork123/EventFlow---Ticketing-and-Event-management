@@ -1,27 +1,24 @@
-/*
-  This is a simple navbar component that can be used in any React project.
-  It has a few basic features:
-    - Home link
-    - Link link
-    - New Button link
-    - Dropdown menu
-    - Search bar
-*/
-import './header_navbar.css'
-
-import React, { useState } from "react";
+import './header_navbar.css';
+import React, { useState } from 'react';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const handleToggleDropdown = () => {
     setDropdownOpen((prevOpen) => !prevOpen);
   };
 
+  const handleToggleSearch = () => {
+    setSearchOpen((prevOpen) => !prevOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <a href="#">Navbar</a>
+        <a href="#">
+          <img src="/images/logo192.png" alt="Navbar Logo" />
+        </a>
       </div>
       <ul className="navbar-nav">
         <li className="nav-item">
@@ -38,9 +35,7 @@ const Navbar = () => {
           <a
             href="#"
             className="nav-link dropdown-toggle"
-            onClick={handleToggleDropdown}
-          >
-            Dropdown
+            onClick={handleToggleDropdown}> Dropdown
           </a>
           <ul className={`dropdown-content ${dropdownOpen ? 'open' : ''}`}>
             <li>
@@ -56,8 +51,15 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-search">
-        <input type="text" placeholder="Search" />
-        <button type="submit">Search</button>
+        <button className="search-button" onClick={handleToggleSearch}>
+          <img src="/images/search_button_icon.png" alt="Search Icon" />
+        </button>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search..."
+          className={searchOpen ? 'search-input' : 'search-input hidden'}
+        />
       </div>
     </nav>
   );
