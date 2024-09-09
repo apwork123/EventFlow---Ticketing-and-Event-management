@@ -1,17 +1,17 @@
 .navbar {
-  background-color: #444;
-  border-radius: 30px;
+  background: rgba(217, 217, 217, 0.21);
+  position: sticky;
   overflow: visible;
   color: #000;
-  display: flex;
-  justify-content: space-between;
+  display:flex;
+  justify-content:space-between;
   align-items: center;
   padding: 1rem;
-  max-width: 1600px; /* set a maximum width for the navbar */
-  margin: 2rem auto; /* add a top margin to move the navbar down */
+  width: 100%; /* set a maximum width for the navbar */
 }
 
 .navbar .navbar-brand {
+  margin-left: 13rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
@@ -25,7 +25,8 @@
 }
 
 .navbar .nav-item {
-  margin-right: 1rem;
+  box-sizing: content-box;
+  padding: 1rem;
 }
 
 .navbar .nav-link{
@@ -37,8 +38,7 @@
 .nav-link:hover {
   background-color: #832929;
   transform: scale(1.1);
-  border-radius: 30px; /* add rounded corners */
-  padding: 1.2rem 2.2rem; /* increase padding to maintain rounded shape */
+  padding: 1.5rem 2.75rem; /* convert 1.2rem 2.2rem to rem */
 }
 
 .navbar ul {
@@ -48,9 +48,7 @@
   display: flex;
 }
 
-.navbar li {
-  margin-right: 1rem;
-}
+
 
 .navbar a {
   color: #ffffff;
@@ -71,17 +69,16 @@
   position: absolute;
   background-color: #555;
   color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 1rem 2rem 0px rgba(0,0,0,0.2);
   z-index: 1;
   top: 100%; /* position the dropdown content below the button */
   left: 0;
-  max-width: 200px;
-  
+  max-width: 12.5rem; /* convert 200px to rem */
 }
 
 .navbar .dropdown-content a {
   color: #fff;
-  padding: 12px 16px;
+  padding: 1.5rem 2rem;
   text-decoration: none;
   display:block;
   transition: background-color 0.2s ease;
@@ -95,7 +92,7 @@
   background-color:transparent;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem; /* convert 4px to rem */
   cursor: pointer;
 }
 
@@ -107,35 +104,37 @@
 }
 
 .navbar .navbar-brand img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem; /* convert 30px to rem */
+  height: 1.875rem; /* convert 30px to rem */
 }
 
 .navbar .navbar-search img{
-  width: 23px;
+  width: 1.4375rem; /* convert 23px to rem */
 }
 
 .navbar-search {
   position: relative;
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  margin-right:13rem;
 }
 
 .navbar .search-input {
   display: none;
   padding: 1rem;
   border: none;
-  border-radius: 4px;
-  width: 200px; /* adjust the width as needed */
+  border-radius: 0.25rem; /* convert 4px to rem */
+  width: 12.5rem; /* convert 200px to rem */
 }
 
 .navbar .search-icon {
   position: relative; /* change from absolute to relative */
   right: 0; /* remove right: 10px; */
   top: 0; /* remove top: 50%; and transform: translateY(50%); */
-  width: 23px;
+  width: 1.4375rem; /* convert 23px to rem */
   display: block; /* make the icon visible by default */
-  margin-left: 10px; /* add some space between the input field and the icon */
+  margin-left: 0.625rem; /* convert 10px to rem */
 }
 
 .search-button.active {
@@ -144,7 +143,7 @@
 
 .search-button:focus + .search-input {
   display: block;
-  padding-right: 30px;
+  padding-right: 1.875rem;
 }
 
 .search-button:focus + .search-input + .search-icon {

@@ -5,9 +5,10 @@
     padding: 20px;
     text-align: center;
     clear: both;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    
   }
   
   .footer .container {

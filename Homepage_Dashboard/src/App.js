@@ -10,6 +10,7 @@ export default function App() {
       <div className='App dark'>
         {/* rest of your app content */}
       </div>
+
       <Footer />
     </>
   );
