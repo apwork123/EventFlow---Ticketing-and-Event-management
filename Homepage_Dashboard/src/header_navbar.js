@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-brand">
         <a href="#">
-          <img src="/images/logo192.png" alt="Navbar Logo" />
+          <img src="/Images/logo.png" alt="Navbar Logo" />
         </a>
       </div>
       <ul className="navbar-nav">

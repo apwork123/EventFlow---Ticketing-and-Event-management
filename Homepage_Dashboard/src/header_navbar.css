@@ -1,17 +1,18 @@
 .navbar {
-  background: rgba(217, 217, 217, 0.21);
+  font-family:  Helvetica, sans-serif;
+  font-size: 1.3rem;
+  background: #fbffff;
   position: sticky;
   overflow: visible;
   color: #000;
   display:flex;
   justify-content:space-between;
   align-items: center;
-  padding: 1rem;
-  width: 100%; /* set a maximum width for the navbar */
+  width: 100%;
+  height: auto;
 }
 
 .navbar .navbar-brand {
-  margin-left: 13rem;
   font-size: 1.5rem;
   font-weight: bold;
   color: #000;
@@ -30,7 +31,7 @@
 }
 
 .navbar .nav-link{
-  color: #ffffff;
+  color: #0a2230;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
@@ -104,8 +105,7 @@
 }
 
 .navbar .navbar-brand img {
-  width: 1.875rem; /* convert 30px to rem */
-  height: 1.875rem; /* convert 30px to rem */
+  width: 5rem; /* convert 30px to rem */
 }
 
 .navbar .navbar-search img{
@@ -117,7 +117,6 @@
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  margin-right:13rem;
 }
 
 .navbar .search-input {
