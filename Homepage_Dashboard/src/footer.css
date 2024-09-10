@@ -2,7 +2,8 @@
 .footer {
     background-color: #0b1b32f7;
     color: #fff;
-    padding: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
     clear: both;
     position: absolute;

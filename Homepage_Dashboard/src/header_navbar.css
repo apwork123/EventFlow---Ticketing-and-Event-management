@@ -18,7 +18,8 @@
   color: #000;
 }
 
-.navbar .navbar-nav {
+.navbar .navbar-nav { 
+  font-weight: 520;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@
 }
 
 .navbar .nav-item {
-  box-sizing: content-box;
+  display: block;
   padding: 1rem;
 }
 
@@ -34,13 +35,15 @@
   color: #0a2230;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  padding: 1rem;
 }
 
 .nav-link:hover {
-  background-color: #832929;
   transform: scale(1.1);
-  padding: 1.5rem 2.75rem; /* convert 1.2rem 2.2rem to rem */
+  text-decoration: underline 4px #0a2230;
+  text-underline-offset: 9px;
 }
+
 
 .navbar ul {
   list-style: none;
@@ -78,15 +81,16 @@
 }
 
 .navbar .dropdown-content a {
-  color: #fff;
+  background-color: white;
+  color:#0a2230;
   padding: 1.5rem 2rem;
   text-decoration: none;
   display:block;
-  transition: background-color 0.2s ease;
+  
 }
 
 .navbar .dropdown-content a:hover{
-  background-color: #832929;
+  background-color: #ffffffad
 }
 
 .navbar .search-button {
@@ -122,9 +126,13 @@
 .navbar .search-input {
   display: none;
   padding: 1rem;
-  border: none;
   border-radius: 0.25rem; /* convert 4px to rem */
   width: 12.5rem; /* convert 200px to rem */
+  outline:0.1rem solid #000;
+  position: absolute; /* add this */
+  top: 0; /* add this */
+  right: 0; /* add this */
+  z-index: 1; /* add this */
 }
 
 .navbar .search-icon {
