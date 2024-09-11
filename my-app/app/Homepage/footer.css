@@ -1,67 +1,125 @@
-.footer {
-    background-color: #222;
-    color: #fff;
-    padding: 40px 0;
-    position: absolute; /* Add this line */
-    bottom: 0; /* This line already exists */
-    width: 100%; /* Add this line */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .col-md-3 {
-    width: 25%;
-  }
-  
-  h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    margin-right: 10px;
-  }
-  
-  .social-icons i {
-    font-size: 18px;
-  }
-  
-  .copyright {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .heart {
-    color: #ff0000;
-  }
+
+
+footer {
+  margin: auto;
+  background-color: #222;
+  color: #fffafa;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Add some padding to create some space between the container and the footer */
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-md-3 {
+  flex: 1;
+  margin-bottom: 30px;
+  /* Add some padding to create some space between the columns */
+  padding: 0 20px;
+}
+
+h4 {
+  margin-bottom: 20px;
+  /* Add some font weight to make the headings stand out */
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  /* Add some margin to create some space between the list items */
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  /* Add some transition to make the hover effect smoother */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Add some margin to create some space between the form and the rest of the footer */
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  flex: 1;
+  /* Add some margin to create some space between the input and the button */
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Add some transition to make the hover effect smoother */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  /* Add some margin to create some space between the social icons and the rest of the footer */
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  /* Add some margin to create some space between the copyright and the rest of the footer */
+  margin-bottom: 20px;
+}
+
+.copyright a {
+  color: #fff;
+}

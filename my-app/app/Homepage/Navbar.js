@@ -1,73 +1,45 @@
 'use client';
 
-
 import './navbar.css';
-import React, { useState } from 'react';
+import React from 'react';
 
-const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-
-  const handleToggleDropdown = () => {
-    setDropdownOpen((prevOpen) => !prevOpen);
-  };
-
-  const handleToggleSearch = () => {
-    setSearchOpen((prevOpen) => !prevOpen);
-  };
-
+function NavBar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <a href="#">
-          <img src='./Images/logo.png' alt="Navbar logo"  />
-        </a>
-      </div>
-      <ul className="navbar-nav">
-        <li key="link1" className="nav-item">
-          <a href="#" className="nav-link">
-            Link 1
-          </a>
-        </li>
-        <li key="link2" className="nav-item">
-          <a href="#" className="nav-link">
-            Link 2
-          </a>
-        </li>
-        <li key="dropdown" className="nav-item dropdown">
-          <a
-            href="#"
-            className="nav-link dropdown-toggle"
-            onClick={handleToggleDropdown}
-          >
-            Dropdown
-          </a>
-          <ul className={`dropdown-content ${dropdownOpen ? 'open' : ''}`}>
-            <li key="action">
-              <a href="#">Action</a>
-            </li>
-            <li key="another-action">
-              <a href="#">Another action</a>
-            </li>
-            <li key="something-else">
-              <a href="#">Something else here</a>
-            </li>
+    <div className="Navbar">
+      <header>
+        <div className="logo">
+          <img src="/my-app/Images/logo.png" alt="Logo" />
+          <h1>Eventflow</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Login</a></li>
+            <li><img src="user.png" alt="User Icon" /></li>
           </ul>
-        </li>
-      </ul>
-      <div className="navbar-search">
-        <button className="search-button" onClick={handleToggleSearch}>
-          <img src="./Images/search_button_icon.png" alt="Search Icon" />
-        </button>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search..."
-          className={`${searchOpen ? 'search-input' : 'search-input hidden'}`}
-        />
-      </div>
-    </nav>
-  );
-};
+        </nav>
+      </header>
 
-export default Navbar;
+      <div className="categories">
+        <button>Sports</button>
+        <button>Concerts</button>
+        <button>Theater</button>
+        <button>Reality Shows</button>
+        <button>Festivals</button>
+      </div>
+
+      <div className="search-bar">
+        <input type="text" placeholder="Search" />
+        <button><span><i className="fa fa-search"></i></span></button>
+        <select>
+          <option value="city">City</option>
+          <option value="city1">City 1</option>
+          <option value="city2">City 2</option>
+        </select>
+      </div>
+    </div>
+  );
+}
+
+export default NavBar;

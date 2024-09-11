@@ -1,59 +1,55 @@
 import React from 'react';
-import './footer.css';
+import styles from './footer.css'
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer>
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <h3>About</h3>
-            <ul>
-              <li>Out story</li>
-              <li>Awards</li>
-              <li>Our Team</li>
-              <li>Career</li>
+            <h4>About</h4>
+            <ul className={styles.footerList}>
+              <li><a href="#">Our story</a></li>
+              <li><a href="#">Awards</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Career</a></li>
             </ul>
           </div>
           <div className="col-md-3">
-            <h3>Company</h3>
-            <ul>
-              <li>Our services</li>
-              <li>Clients</li>
-              <li>Contact</li>
-              <li>Press</li>
+            <h4>Company</h4>
+            <ul className={styles.footerList}>
+              <li><a href="#">Our services</a></li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Press</a></li>
             </ul>
           </div>
           <div className="col-md-3">
-            <h3>Resources</h3>
-            <ul>
-              <li>Blog</li>
-              <li>Newsletter</li>
-              <li>Privacy Policy</li>
+            <h4>Resources</h4>
+            <ul className={styles.footerList}>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
           <div className="col-md-3">
-            <h3>Subscribe</h3>
-            <form>
-              <input type="email" placeholder="Enter email address" />
+            <h4>Subscribe</h4>
+            <form action="#">
+              <input type="email" placeholder="Enter email address" required />
               <button type="submit">Subscribe</button>
-              <p>Get digital marketing updates in your mailbox</p>
             </form>
+            <p>Get digital marketing updates in your mailbox</p>
             <div className="social-icons">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
-              </a>
+              <a href="#"><i className={`fab fa-twitter ${styles.socialIcon}`} /></a>
+              <a href="#"><i className={`fab fa-facebook-f ${styles.socialIcon}`} /></a>
+              <a href="#"><i className={`fab fa-instagram ${styles.socialIcon}`} /></a>
             </div>
           </div>
         </div>
-        <div className="copyright">
-          
+        <div className="row">
+          <div className="col-md-12">
+            
+          </div>
         </div>
       </div>
     </footer>
