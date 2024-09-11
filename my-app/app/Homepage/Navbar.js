@@ -1,5 +1,3 @@
-'use client';
-
 import './navbar.css';
 import React from 'react';
 
@@ -8,15 +6,15 @@ function NavBar() {
     <div className="Navbar">
       <header>
         <div className="logo">
-          <img src="/my-app/Images/logo.png" alt="Logo" />
-          <h1>Eventflow</h1>
+          <img src='./Images/logo.png' alt="Logo" />
+          <h1>EventFlow</h1>
         </div>
         <nav>
           <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">FAQs</a></li>
             <li><a href="#">Login</a></li>
-            <li><img src="user.png" alt="User Icon" /></li>
+            <li><img src="" alt="User Icon" /></li>
           </ul>
         </nav>
       </header>

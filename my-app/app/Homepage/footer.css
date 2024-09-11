@@ -2,8 +2,8 @@
 
 footer {
   margin: auto;
-  background-color: #222;
-  color: #fffafa;
+  background-color: #bbbbbb2c;
+  color: #000000;
   padding: 40px 0;
   margin-bottom: 20px;
   position: absolute;
@@ -51,7 +51,7 @@ li {
 }
 
 a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   /* Add some transition to make the hover effect smoother */
   transition: color 0.3s ease;
