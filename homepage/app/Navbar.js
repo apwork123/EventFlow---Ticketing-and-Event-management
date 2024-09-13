@@ -6,7 +6,7 @@ function NavBar() {
     <div className="Navbar">
       <header>
         <div className="logo">
-          <img src='./Images/logo.png' alt="Logo" />
+          <img src='/Homepage_Images/logo.png' alt="Logo" />
           <h1>EventFlow</h1>
         </div>
         <nav>
