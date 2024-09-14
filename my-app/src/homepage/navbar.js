@@ -46,7 +46,7 @@ function SearchBar() {
   return (
     <div className="search-bar">
       <input type="text" placeholder="Search" />
-      <button><span><i className="fa fa-search"></i></span></button>
+      <button><span></span></button>
       <select>
         <option value="city">City</option>
         <option value="city1">City 1</option>

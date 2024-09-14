@@ -95,7 +95,7 @@ nav a {
 
 .categories button {
   padding: 0.625rem 1.25rem; /* 10px 20px */
-  background-color: #eee;
+  background-color: transparent;
   color: black;
   border: none;
   border-radius: 0.3125rem; /* 5px */
@@ -103,6 +103,7 @@ nav a {
 }
 
 .categories button:hover {
-  background-color: #ddd;
-
+  background-color: transparent;
+  text-decoration: underline #ccc; 
+  text-underline-offset: 1 rem;
 }

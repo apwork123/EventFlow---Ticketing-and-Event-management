@@ -24,13 +24,21 @@
   }
   
   .carousel-control {
+    opacity: 0;
+    transition: opacity 0.3s ease;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: transparent;
     color: white;
     padding: 0.625rem; /* 10px */
     text-decoration: none;
+    font-size:  1.25rem; /* 20px */
+
+  }
+
+  .carousel:hover .carousel-control{
+    opacity: 1;
   }
   
   .carousel-control.prev { left: 0.625rem; /* 10px */ }
