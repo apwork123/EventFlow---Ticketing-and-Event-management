@@ -1,0 +1,63 @@
+.carousel {
+  position: relative;
+  width:auto;
+  height: 400px;
+  overflow: hidden;
+  margin:auto;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  object-fit:fill;
+  width:fit-content;
+  height:auto;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.indicator {
+  width: 3rem;
+  height: 0.2rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.329);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* Add this */
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: -1rem; /* Increase the hit box by 1rem above and below */
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 2.2rem; /* Calculate the new height based on the original height and the increased hit box */
+  cursor: pointer; /* Make sure the pseudo-element also has a pointer cursor */
+}
+
+.indicator.active {
+  background-color: #ffffffd0;
+}
