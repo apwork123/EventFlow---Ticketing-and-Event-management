@@ -44,7 +44,7 @@ function Categories() {
 
 function SearchBar() {
   return (
-    <div className={styles.searchBar}>
+    <div className={styles.SearchBar}>
       <input type="text" placeholder="Search" />
       <button><span></span></button>
       <select>
