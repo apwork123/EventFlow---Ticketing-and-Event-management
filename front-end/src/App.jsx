@@ -1,10 +1,8 @@
 import Navbar from './homepage/navbar/navbar.jsx'
 import  Footer from './homepage/footer/footer.jsx'
 import Carousel from './homepage/AutoCarousel/Carousel.jsx'
+import DropdownNav from './homepage/dropdown/Dropdownnav.jsx'
 import React from 'react'
-
-
-
 
 export default function App() {
   const images = [
@@ -15,6 +13,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <DropdownNav />
       <Carousel images={images} interval={5000} />
       <Footer />
     </>

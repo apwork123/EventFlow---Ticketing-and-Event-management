@@ -44,15 +44,18 @@ function Categories() {
 
 function SearchBar() {
   return (
-    <div className={styles.SearchBar}>
-      <input type="text" placeholder="Search" />
-      <button><span></span></button>
-      <select>
-        <option value="city">City</option>
-        <option value="city1">City 1</option>
-        <option value="city2">City 2</option>
-      </select>
-    </div>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}>
+        <input type="text" placeholder="Search" />
+        <button><span></span></button>
+        <select>
+         <option value="city">City</option>
+         <option value="city1">City 1</option>
+         <option value="city2">City 2</option>
+       </select>
+     </div>
   );
 }
 
