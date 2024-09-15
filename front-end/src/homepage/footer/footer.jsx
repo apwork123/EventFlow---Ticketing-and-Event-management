@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './footer.css'
+import styles from './footer.module.css';
 
 function Footer() {
   return (
-    <footer>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.row}>
+          <div className={`${styles.col} ${styles.md3}`}>
             <h4>About</h4>
             <ul className={styles.footerList}>
               <li><a href="#">Our story</a></li>
@@ -15,7 +15,7 @@ function Footer() {
               <li><a href="#">Career</a></li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className={`${styles.col} ${styles.md3}`}>
             <h4>Company</h4>
             <ul className={styles.footerList}>
               <li><a href="#">Our services</a></li>
@@ -24,7 +24,7 @@ function Footer() {
               <li><a href="#">Press</a></li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className={`${styles.col} ${styles.md3}`}>
             <h4>Resources</h4>
             <ul className={styles.footerList}>
               <li><a href="#">Blog</a></li>
@@ -32,22 +32,22 @@ function Footer() {
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
-          <div className="col-md-3">
+          <div className={`${styles.col} ${styles.md3}`}>
             <h4>Subscribe</h4>
             <form action="#">
               <input type="email" placeholder="Enter email address" required />
               <button type="submit">Subscribe</button>
             </form>
             <p>Get digital marketing updates in your mailbox</p>
-            <div className="social-icons">
-              <a href="#"><i className={`fab fa-twitter ${styles.socialIcon}`} /></a>
-              <a href="#"><i className={`fab fa-facebook-f ${styles.socialIcon}`} /></a>
-              <a href="#"><i className={`fab fa-instagram ${styles.socialIcon}`} /></a>
+            <div className={styles.socialIcons}>
+              <a href="#"><i className={`${styles.socialIcon} fab fa-twitter`} /></a>
+              <a href="#"><i className={`${styles.socialIcon} fab fa-facebook-f`} /></a>
+              <a href="#"><i className={`${styles.socialIcon} fab fa-instagram`} /></a>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">
+        <div className={styles.row}>
+          <div className={styles.col12}>
             
           </div>
         </div>

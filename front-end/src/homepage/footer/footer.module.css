@@ -1,6 +1,4 @@
-
-
-footer {
+.footer {
   margin: auto;
   background-color: #bbbbbb2c;
   color: #000000;
@@ -16,7 +14,6 @@ footer {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  /* Add some padding to create some space between the container and the footer */
   padding: 0 20px;
 }
 
@@ -26,100 +23,85 @@ footer {
   align-items: center;
 }
 
-.col-md-3 {
+.col {
   flex: 1;
   margin-bottom: 30px;
-  /* Add some padding to create some space between the columns */
   padding: 0 20px;
+}
+
+.md3 {
+  flex-basis: 25%;
 }
 
 h4 {
   margin-bottom: 20px;
-  /* Add some font weight to make the headings stand out */
   font-weight: bold;
 }
 
-ul {
+.footerList {
   list-style: none;
   padding: 0;
-  /* Add some margin to create some space between the list items */
   margin-bottom: 20px;
 }
 
-li {
+.footerList li {
   margin-bottom: 10px;
 }
 
-a {
+.footerList a {
   color: #000000;
   text-decoration: none;
-  /* Add some transition to make the hover effect smoother */
   transition: color 0.3s ease;
 }
 
-a:hover {
+.footerList a:hover {
   text-decoration: underline;
   color: #007bff;
 }
 
-form {
+.subscribeForm {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Add some margin to create some space between the form and the rest of the footer */
   margin-bottom: 20px;
 }
 
-input[type="email"] {
+.subscribeForm input[type="email"] {
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 5px;
   flex: 1;
-  /* Add some margin to create some space between the input and the button */
   margin-right: 10px;
 }
 
-button {
+.subscribeForm button {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* Add some transition to make the hover effect smoother */
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.subscribeForm button:hover {
   background-color: #0056b3;
 }
 
-.social-icons {
+.socialIcons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  /* Add some margin to create some space between the social icons and the rest of the footer */
   margin-bottom: 20px;
 }
 
-.social-icons a {
+.socialIcons a {
   color: #fff;
   font-size: 20px;
   transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.socialIcons a:hover {
   color: #007bff;
-}
-
-.copyright {
-  text-align: center;
-  font-size: 14px;
-  /* Add some margin to create some space between the copyright and the rest of the footer */
-  margin-bottom: 20px;
-}
-
-.copyright a {
-  color: #fff;
 }

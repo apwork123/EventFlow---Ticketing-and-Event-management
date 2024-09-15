@@ -1,0 +1,68 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 37.5rem; /* 600px */
+  height: 25rem; /* 400px */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 25rem; /* 400px */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control {
+  opacity: 1; /* Set opacity to 1 by default */
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 0.625rem; /* Move to the bottom */
+  padding: 0.625rem; /* 10px */
+  text-decoration: none;
+  font-size: 1.25rem; /* 20px */
+  cursor: pointer; /* Add cursor pointer to make it clear it's a clickable element */
+}
+
+.carousel-control.prev {
+  left: 0.625rem; /* 10px */
+}
+
+.carousel-control.next {
+  right: 0.625rem; /* 10px */
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0.325rem; /* 10px */
+  
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  opacity: 1; /* Set opacity to 1 */
+}
+
+.carousel-indicators button {
+  background-color: #818181;
+  border: none;
+  width: 0.3125rem; /* 5px */
+  height: 0.0625rem; /* 1px */
+  margin: 0 0.5rem; /* Adjusted margin to make buttons evenly spaced */
+  cursor: pointer;
+  opacity: 1; /* Set opacity to 1 */
+  transform: scale(1); /* Remove scaling */
+}
+
+.carousel-indicators button.active {
+  background-color: #fff;
+}

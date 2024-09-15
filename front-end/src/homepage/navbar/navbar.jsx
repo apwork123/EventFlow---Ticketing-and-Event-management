@@ -1,9 +1,9 @@
 import React from 'react';
-import './navbar.css';
+import styles from './navbar.module.css'
 
 function Navbar() {
   return (
-    <div className="Navbar">
+    <div className={styles.Navbar}>
       <Header />
       <Categories />
       <SearchBar />
@@ -14,7 +14,7 @@ function Navbar() {
 function Header() {
   return (
     <header>
-      <div className="logo">
+      <div className={styles.logo}>
         <img src='/Homepage_Images/logo.png' alt="Logo" />
         <h1>EventFlow</h1>
       </div>
@@ -32,7 +32,7 @@ function Header() {
 
 function Categories() {
   return (
-    <div className="categories">
+    <div className={styles.categories}>
       <button>Sports</button>
       <button>Concerts</button>
       <button>Theater</button>
@@ -44,7 +44,7 @@ function Categories() {
 
 function SearchBar() {
   return (
-    <div className="search-bar">
+    <div className={styles.searchBar}>
       <input type="text" placeholder="Search" />
       <button><span></span></button>
       <select>
