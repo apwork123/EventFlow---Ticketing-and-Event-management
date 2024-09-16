@@ -1,7 +1,7 @@
 import Navbar from './homepage/navbar/navbar.jsx'
 import  Footer from './homepage/footer/footer.jsx'
-import Carousel from './homepage/AutoCarousel/Carousel.jsx'
-import DropdownNav from './homepage/dropdown/Dropdownnav.jsx'
+import Carousel from './assets/AutoCarousel/Carousel.jsx'
+import Dropdown from './assets/Dropdown.jsx'
 import React from 'react'
 
 export default function App() {
@@ -13,8 +13,23 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <DropdownNav />
-      <Carousel images={images} interval={5000} />
+
+
+      <div>
+        <h2 style={{display: 'flex'
+          ,justifyContent: 'center',
+          marginRight: '60%'
+        }}> Hottest Events Right Now </h2>
+        <Carousel images={images} interval={5000} />
+      </div>
+      <div>
+      <h2 style={{display: 'flex'
+          ,justifyContent: 'center',
+          marginRight: '60%'
+        }}> Trending in your City </h2>
+        <Carousel images={images} interval={5000} />
+      </div>
+
       <Footer />
     </>
   )

@@ -34,6 +34,7 @@
     z-index: 10;
   }
   
+  
   .dropdown-content {
     display: flex;
     align-items:  center;
@@ -57,7 +58,7 @@
     flex-grow: 1;
   }
   
-  .categories-container h3 {
+  .categories-container h4 {
     margin: 0;
     font-size: 18px;
     color: #111827;
@@ -71,8 +72,8 @@
   
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 8px;
   }
   
   .category-link {
