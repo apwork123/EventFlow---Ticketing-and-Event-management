@@ -14,8 +14,10 @@ function Dropdown({ buttonText, options }) {
   };
 
   return (
-    <div onMouseOut={handleMouseOut}>
-      <button onClick={handleClick}>{buttonText}</button>
+    <div  onMouseOut={handleMouseOut}>
+      <button style={{ border: '0',
+        backgroundColor:'transparent'
+       }} onClick={handleClick}>{buttonText}</button>
       {showDropdown && (
         <ul style={{ listStyle: 'none', padding: 0, margin: 0, position: 'absolute' }} onMouseOut={handleMouseOut}>
           {options.map((option, index) => (
