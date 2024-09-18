@@ -16,6 +16,10 @@ function Dropdown({ buttonText, options }) {
   return (
     <div  onMouseOut={handleMouseOut}>
       <button style={{ border: '0',
+        padding: 0, 
+        margin: 0,
+        fontSize:  15,
+
         backgroundColor:'transparent'
        }} onClick={handleClick}>{buttonText}</button>
       {showDropdown && (

@@ -26,7 +26,7 @@
   .dropdown-menu {
     position: absolute;
     top: 100%;
-    width: 480px;
+    width: max-content;
     background-color: #ffffff;
     border: 1px solid #d1d5db;
     border-radius: 4px;
@@ -43,9 +43,9 @@
   
   .image-container {
     flex-shrink: 0;
-    width: 128px;
-    height: 128px;
-    margin-right: 16px;
+    width: 17rem;
+    
+    margin-right: 1.5rem;
   }
   
   .image-container img {
@@ -59,8 +59,8 @@
   }
   
   .categories-container h4 {
-    margin: 0;
-    font-size: 18px;
+    
+    font-size: 1.4rem;
     color: #111827;
   }
   
@@ -73,7 +73,7 @@
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px 8px;
+    gap: 0.6rem 3rem;
   }
   
   .category-link {

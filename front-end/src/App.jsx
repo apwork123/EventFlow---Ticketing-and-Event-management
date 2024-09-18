@@ -1,7 +1,7 @@
 import Navbar from './homepage/navbar/navbar.jsx'
 import  Footer from './homepage/footer/footer.jsx'
 import Carousel from './assets/AutoCarousel/Carousel.jsx'
-import Dropdown from './assets/Dropdown.jsx'
+import ComboboxDemo from './assets/ComboBox/ComboboxDemo.jsx'
 import React from 'react'
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-
+      
 
       <div>
         <h2 style={{display: 'flex'

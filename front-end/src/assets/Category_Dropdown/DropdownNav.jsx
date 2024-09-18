@@ -9,7 +9,7 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
   }
 
   return (
-    <div className="dropdown" onMouseLeave={onMouseLeave || handleMouseLeave}>
+    <div className="dropdown" >
       <button className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
         {label}
       </button>
@@ -38,3 +38,5 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
 }
 
 export default DropdownNav
+
+//onMouseLeave={onMouseLeave || handleMouseLeave}

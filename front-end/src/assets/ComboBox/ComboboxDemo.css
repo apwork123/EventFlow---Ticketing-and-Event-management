@@ -1,0 +1,75 @@
+.combobox-container {
+    position: relative;
+    width: 200px;
+  }
+  
+  .combobox-trigger {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .chevron-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+  }
+  
+  .combobox-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .combobox-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .combobox-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .combobox-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .combobox-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .combobox-item.selected {
+    background-color: #e0e0e0;
+  }
+  
+  .check-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    opacity: 0;
+  }
+  
+  .check-icon.visible {
+    opacity: 1;
+  }
