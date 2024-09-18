@@ -51,12 +51,39 @@ function Header() {
 
 function Categories() {
   const sportsCategories = [
-    { name: 'Football' },
-    { name: 'Cricket' },
-    { name: 'Basketball' },
-    { name: 'Tennis' },
-    // Add more sports categories here
-  ];
+    {
+      name: 'Sports',
+      subcategories: [
+        {
+          name: 'Sports',
+          subcategories: [
+            { name: 'Football' },
+            { name: 'Cricket' },
+            { name: 'Basketball' },
+            { name: 'Tennis' },
+          ],
+        },
+        {
+          name: 'Motorsports',
+          subcategories: [
+            { name: 'Formula 1' },
+            { name: 'MotoGP' },
+            { name: 'Endurance' },
+            { name: 'Rally' },
+          ],
+        },
+        {
+          name: 'eSports',
+          subcategories: [
+            { name: 'LoL' },
+            { name: 'CS2' },
+            { name: 'Valorant' },
+            { name: 'Dota 2' },
+          ],
+        },
+      ],
+    },
+  ];;
 
   const concertsCategories = [
     { name: 'Diljit Dosanjh' },
@@ -127,7 +154,13 @@ function Categories() {
   
   return (
     <div className={styles.categories}>
-      <DropdownNav label="Sports" style={{ left: '0' }} categories={sportsCategories} />
+      {sportsCategories.map((category) => (
+        <DropdownNav
+          key={category.name}
+          label={category.name}
+          categories={category.subcategories}
+        />
+      ))}
       <DropdownNav label="Concerts" style={{ left: 0 }} categories={concertsCategories} />
       <DropdownNav label="Theater" categories={theaterCategories} />
       <DropdownNav label="Reality Shows" style={{ right: 0 }} categories={realityShowsCategories} />
