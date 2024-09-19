@@ -23,7 +23,7 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
               <img src="https://picsum.photos/id/1019/600/400" alt="PSD Mockups" />
             </div>
             <div className="categories-container">
-              <h4>PSD Mockups</h4>
+              
               <div className="categories-grid">
                 {categories.map((category) => (
                   <div key={category.name}>
@@ -31,7 +31,7 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
                       {category.name}
                     </a>
                     {category.subcategories && (
-                      <ul className="subcategories-list">
+                      <ul className="subcategories-list no-bullets">
                         {category.subcategories.map((subcategory) => (
                           <li key={subcategory.name}>
                             <a href="#" className="subcategory-link">

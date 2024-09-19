@@ -115,7 +115,7 @@ function Categories() {
   ];
 
   const realityShowsCategories = [
-    { name: 'Carousel', description: 'Trending content from the category user is hovering over' },
+    
     { name: 'Award Shows', subcategories: [
       { name: 'Filmfare Awards' },
       { name: 'ZEE Cine Awards' },

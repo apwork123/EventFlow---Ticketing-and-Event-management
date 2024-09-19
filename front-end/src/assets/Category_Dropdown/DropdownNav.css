@@ -77,11 +77,15 @@
   }
   
   .category-link {
-    font-size: 14px;
+    font-size: 1.4rem;
     color: #374151;
     text-decoration: none;
   }
   
   .category-link:hover {
     color: #111827;
+  }
+
+  .no-bullets {
+    list-style: none;
   }
