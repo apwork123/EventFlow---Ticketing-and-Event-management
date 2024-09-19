@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './navbar.module.css';
 import DropdownNav from '../../assets/Category_Dropdown/DropdownNav';
 import Dropdown from '../../assets/Dropdown';
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -34,12 +35,15 @@ function Header() {
               e.stopPropagation();
             }}>
               <span>
-                <Dropdown
-                  buttonText="Login"
-                  options={['Login', 'Login (Manager)']}
-                  onClick={(e) => e.stopPropagation()}
-                />
-              </span>
+              <Dropdown
+                buttonText="Login"
+                options={[
+                <Link to="/login">Login</Link>,
+                <Link to="/login-manager">Login (Manager)</Link>,
+                ]}
+        onClick={(e) => e.stopPropagation()}
+      />
+    </span>
             </a>
           </li>
           <li><img src="" alt="User Icon" /></li>
