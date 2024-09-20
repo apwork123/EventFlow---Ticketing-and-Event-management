@@ -3,27 +3,27 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #01060e;
 }
 
 .login-form {
-  background-color: white;
+  background-color: #01060e;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 20px 3px #b02cf2;
   width: 100%;
   max-width: 400px;
 }
 
 h2 {
   text-align: center;
-  color: #1f2937;
+  color: #e2effd;
   margin-bottom: 0.5rem;
 }
 
 p {
   text-align: center;
-  color: #6b7280;
+  color: #e2effd;
   margin-bottom: 1.5rem;
 }
 
@@ -34,7 +34,7 @@ p {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #4b5563;
+  color: #e2effd;
 }
 
 input[type="email"],

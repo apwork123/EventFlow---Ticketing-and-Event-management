@@ -2,7 +2,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #bbbbbb2c;
-  color: #000000;
+  color: #e2effd;
   padding: 2.5rem 0;
   margin-bottom: 0.1rem;
   margin-top: 1.2rem;
@@ -54,7 +54,7 @@ h4 {
 }
 
 .footerList a {
-  color: #000000;
+  color: #e2effd;
   text-decoration: none;
   transition: color 0.3s ease;
 }

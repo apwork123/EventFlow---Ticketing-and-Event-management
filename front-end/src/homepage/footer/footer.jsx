@@ -35,7 +35,7 @@ function Footer() {
           <div className={`${styles.col} ${styles.md3}`}>
             <h4>Subscribe</h4>
             <form action="#">
-              <input type="email" placeholder="Enter email address" required />
+              <input style={{backgroundColor: 'transparent'}} type="email" placeholder="Enter email address" required />
               <button type="submit">Subscribe</button>
             </form>
             <p>Get digital marketing updates in your mailbox</p>

@@ -16,6 +16,7 @@ function Dropdown({ buttonText, options }) {
   return (
     <div  onMouseOut={handleMouseOut}>
       <button style={{ border: '0',
+        color: '#e2effd',
         padding: 0, 
         margin: 0,
         fontSize:  15,

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import React from 'react';
 import styles from './navbar.module.css';
 import DropdownNav from '../../assets/Category_Dropdown/DropdownNav';
 import Dropdown from '../../assets/Dropdown';
+import Combobox from '../../assets/ComboBox/ComboboxDemo';
 import { Link } from 'react-router-dom'
 
 function Navbar() {
@@ -35,8 +37,8 @@ function Header() {
               e.stopPropagation();
             }}>
               <span>
-              <Dropdown
-                buttonText="Login"
+              <Dropdown 
+                buttonText="Login" 
                 options={[
                 <Link to="/login">Login</Link>,
                 <Link to="/login-manager">Login (Manager)</Link>,
@@ -159,7 +161,7 @@ function Categories() {
   return (
     <div className={styles.categories}>
       {sportsCategories.map((category) => (
-        <DropdownNav
+        <DropdownNav style={{ left: 0 }}
           key={category.name}
           label={category.name}
           categories={category.subcategories}
@@ -174,6 +176,20 @@ function Categories() {
 }
 
 function SearchBar() {
+  const cities = [
+    { value: "city1", label: "City 1" },
+    { value: "city2", label: "City 2" },
+    { value: "city3", label: "City 3" },
+    // Add more cities here
+  ];
+
+  const [selectedCity, setSelectedCity] = useState("");
+
+  const handleCityChange = (city) => {
+    setSelectedCity(city);
+    // do something with the selected city
+  };
+
   return (
     <div style={{
       display: 'flex',
@@ -185,12 +201,13 @@ function SearchBar() {
       backgroundColor: '#ccc'
     }}>
       <input type="text" placeholder="Search" />
+      <Combobox
+        options={cities}
+        value={selectedCity}
+        onChange={handleCityChange}
+        placeholder="Select a city..."
+      />
       <button><span></span></button>
-      <select>
-        <option value="city">City</option>
-        <option value="city1">City 1</option>
-        <option value="city2">City 2</option>
-      </select>
     </div>
   );
 }

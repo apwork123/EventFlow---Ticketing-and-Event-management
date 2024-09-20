@@ -18,14 +18,16 @@ export default function Homepage() {
       <div>
         <h2 style={{display: 'flex'
           ,justifyContent: 'center',
-          marginRight: '60%'
+          marginRight: '60%',
+          color: '#e2effd'
         }}> Hottest Events Right Now </h2>
         <Carousel images={images} interval={5000} />
       </div>
       <div>
       <h2 style={{display: 'flex'
           ,justifyContent: 'center',
-          marginRight: '60%'
+          marginRight: '60%',
+          color: '#e2effd'
         }}> Trending in your City </h2>
         <Carousel images={images} interval={5000} />
       </div>
