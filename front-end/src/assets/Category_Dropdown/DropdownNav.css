@@ -27,7 +27,7 @@
     position: absolute;
     top: 100%;
     width: max-content;
-    background-color: #ffffff;
+    background-color: #3a0ba8;
     border: 1px solid #d1d5db;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -61,7 +61,7 @@
   .categories-container h4 {
     
     font-size: 1.4rem;
-    color: #111827;
+    color: #e2effd;
   }
   
   .categories-container p {
@@ -78,7 +78,7 @@
   
   .category-link {
     font-size: 1.4rem;
-    color: #374151;
+    color: #e2effd;
     text-decoration: none;
   }
   
@@ -88,4 +88,9 @@
 
   .no-bullets {
     list-style: none;
+  }
+
+  .subcategory-link{
+    color:  #e2effd;
+    text-decoration: none;
   }

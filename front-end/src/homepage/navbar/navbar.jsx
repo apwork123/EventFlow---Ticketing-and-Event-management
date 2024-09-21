@@ -9,12 +9,17 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <>
-      <div className={styles.Navbar}>
-       <Header />
-       <Categories />
-      </div>
-      <div >
-        <SearchBar  />
+      <div style={{width: '100%',
+       backgroundColor: '#3a0ba8'
+      }}>
+        <div className={styles.Navbar}>
+         <Header />
+         <Categories />
+        </div>
+      
+     </div>
+     <div >
+       <SearchBar  />
       </div>
     </>
   );
@@ -195,6 +200,7 @@ function SearchBar() {
       display: 'flex',
       justifyContent: 'center',
       border:  '0.7rem solid #ccc',
+      minWidth: 'min-content',
       borderRadius: '2rem',
       marginRight: '18rem',
       marginLeft: '18rem',
