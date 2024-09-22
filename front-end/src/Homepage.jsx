@@ -1,6 +1,7 @@
 import Navbar from './homepage/navbar/navbar.jsx'
 import  Footer from './homepage/footer/footer.jsx'
 import Carousel from './assets/AutoCarousel/Carousel.jsx'
+import SearchBar from './homepage/SearchBar/SearchBar.jsx'
 import ComboboxDemo from './assets/ComboBox/ComboboxDemo.jsx'
 import React from 'react'
 
@@ -14,7 +15,12 @@ export default function Homepage() {
     <>
       <Navbar />
       
-
+      <div style={{ display: 'flex',
+        justifyContent: 'center',
+      }}>
+          <SearchBar  />
+      </div>
+      
       <div>
         <h2 style={{display: 'flex'
           ,justifyContent: 'center',
@@ -23,6 +29,8 @@ export default function Homepage() {
         }}> Hottest Events Right Now </h2>
         <Carousel images={images} interval={5000} />
       </div>
+      
+
       <div>
       <h2 style={{display: 'flex'
           ,justifyContent: 'center',

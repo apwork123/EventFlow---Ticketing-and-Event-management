@@ -94,3 +94,7 @@
     color:  #e2effd;
     text-decoration: none;
   }
+
+  .subcategory-link:hover {
+    color: #111827;
+  }

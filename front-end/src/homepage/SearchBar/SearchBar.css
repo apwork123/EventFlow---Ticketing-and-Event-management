@@ -1,0 +1,117 @@
+.search-bar-container {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 30px;
+  border: 10px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.city-select-container,
+.date-picker-container {
+  position: relative;
+}
+
+.city-select-button,
+.date-picker-button {
+  padding: 12px 16px;
+  background-color: white;
+  border: none;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.chevron-icon,
+.calendar-icon {
+  margin-left: auto;
+}
+
+.city-dropdown,
+.calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  z-index: 1000;
+}
+
+.city-search {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.city-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.city-list li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.city-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar {
+  padding: 8px;
+  width: 240px;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+  text-align: center;
+  padding: 8px;
+}
+
+.calendar td {
+  cursor: pointer;
+}
+
+.calendar td:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar .selected {
+  background-color: #007bff;
+  color: white;
+}

@@ -10,7 +10,6 @@ function Navbar() {
   return (
     <>
       <div style={{width: '100%',
-       backgroundColor: '#3a0ba8'
       }}>
         <div className={styles.Navbar}>
          <Header />
@@ -19,7 +18,7 @@ function Navbar() {
       
      </div>
      <div >
-       <SearchBar  />
+      
       </div>
     </>
   );
@@ -180,42 +179,5 @@ function Categories() {
   );
 }
 
-function SearchBar() {
-  const cities = [
-    { value: "city1", label: "City 1" },
-    { value: "city2", label: "City 2" },
-    { value: "city3", label: "City 3" },
-    // Add more cities here
-  ];
-
-  const [selectedCity, setSelectedCity] = useState("");
-
-  const handleCityChange = (city) => {
-    setSelectedCity(city);
-    // do something with the selected city
-  };
-
-  return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      border:  '0.7rem solid #ccc',
-      minWidth: 'min-content',
-      borderRadius: '2rem',
-      marginRight: '18rem',
-      marginLeft: '18rem',
-      backgroundColor: '#ccc'
-    }}>
-      <input type="text" placeholder="Search" />
-      <Combobox
-        options={cities}
-        value={selectedCity}
-        onChange={handleCityChange}
-        placeholder="Select a city..."
-      />
-      <button><span></span></button>
-    </div>
-  );
-}
-
+ 
 export default Navbar;
