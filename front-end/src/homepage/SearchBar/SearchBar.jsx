@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SearchBar.css';
 
 const cities = [
@@ -13,16 +13,19 @@ export default function SearchBar() {
   const [showCalendar, setShowCalendar] = useState(false);
   const [filteredCities, setFilteredCities] = useState(cities);
 
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      if (!event.target.closest('.city-select-container') && !event.target.closest('.date-picker-container')) {
+        setShowCityDropdown(false);
+        setShowCalendar(false);
+      }
+    };
+    document.addEventListener('click', handleDocumentClick);
+    return () => {
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [setShowCityDropdown, setShowCalendar]);
 
-  const handleCityDropdownClick = () => {
-    setShowCityDropdown(!showCityDropdown);
-    setShowCalendar(false); // Close date picker when city dropdown is clicked
-  };
-
-  const handleDatePickerClick = () => {
-    setShowCalendar(!showCalendar);
-    setShowCityDropdown(false); // Close city dropdown when date picker is clicked
-  };
 
   const handleCitySearch = (e) => {
     const filter = e.target.value.toLowerCase();
