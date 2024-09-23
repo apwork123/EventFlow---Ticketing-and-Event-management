@@ -1,20 +1,19 @@
-import React from 'react'
+import React from 'react';
+import Info_Card from './Info_Card';
+import Event_Info from './Event_Info';
 
-export default function Event_Page() {
+export default function Event_Page(props) {
   return (
     <>
-      
-     <div style={{
-      display: 'flex',
-      justifyContent: 'center'
-     }}>
-      <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?w=1380&t=st=1727033705~exp=1727034305~hmac=58dc386004d9988b9c1206f9e391bb633905267e7ca37385c373354aad2a0de8"
-      style={{
-        width: '1000px',
-        
+      <div>
+        <Event_Info imageUrl={props.imageUrl} />
+      </div>
+      <div style={{display: 'flex',
+        justifyContent: 'flex-end',
+        marginRight: '6rem'
       }}>
-      </img>
-     </div>
-     </>
-  )
+        <Info_Card imageUrl={props.imageUrl} />
+      </div>
+    </>
+  );
 }

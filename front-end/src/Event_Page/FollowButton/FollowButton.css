@@ -1,0 +1,35 @@
+.follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #3b82f6;
+    color: #ffffff;
+  }
+  
+  .follow-button.following {
+    background-color: #e5e5e5;
+    color: #1f2937;
+  }
+  
+  .follow-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    transition: fill 0.3s;
+    fill: #ffffff;
+  }
+  
+  .follow-button.following .follow-icon {
+    fill: #ef4444;
+  }
+  
+  .follow-button:hover {
+    opacity: 0.9;
+  }

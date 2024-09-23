@@ -8,6 +8,7 @@ import LoginPage from  "./login_page/LoginPage";
 
 import Homepage from "./Homepage";
 import Event_Page from "./Event_Page/Event_Page";
+import Eventpagetest from "./Event_Page/Event-page-test";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/event_page",
-    element: <Event_Page  />
+    element: <Eventpagetest />
 
   }
 ]);
