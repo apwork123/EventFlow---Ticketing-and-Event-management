@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './footer.module.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Footer() {
   return (
@@ -35,8 +36,10 @@ function Footer() {
           <div className={`${styles.col} ${styles.md3}`}>
             <h4>Subscribe</h4>
             <form action="#">
-              <input style={{backgroundColor: 'transparent'}} type="email" placeholder="Enter email address" required />
-              <button type="submit">Subscribe</button>
+              <input style={{ backgroundColor: 'transparent' }} type="email" placeholder="Enter email address" required />
+              <div className={styles.subscribeForm}>
+                <button className={styles.subscribeBtn}>Subscribe</button>
+              </div>
             </form>
             <p>Get digital marketing updates in your mailbox</p>
             <div className={styles.socialIcons}>

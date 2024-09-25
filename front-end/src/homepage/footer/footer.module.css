@@ -11,7 +11,7 @@
   width: 80%;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .container {
@@ -79,17 +79,18 @@ h4 {
   margin-right: 0.625rem;
 }
 
-.subscribeForm button {
+.subscribeBtn {
   background-color: #007bff;
   color: #fff;
   padding: 0.625rem 1.25rem;
+  margin-top: 1rem;
   border: none;
   border-radius: 0.3125rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.subscribeForm button:hover {
+.subscribeBtn:hover {
   background-color: #0056b3;
 }
 
@@ -98,7 +99,6 @@ h4 {
   justify-content: space-between;
   align-items: center;
   margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .socialIcons a {
