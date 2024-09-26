@@ -3,12 +3,18 @@ import './DropdownNav.css';
 
 const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState('../../../public/Homepage_Images/ImageIcon.png'); // default image URL
 
   const handleMouseLeave = () => {
     setIsOpen(false);
     if (onMouseLeave) {
       onMouseLeave();
     }
+  };
+
+  const handleSubcategoryHover = (subcategory) => {
+    // update the image URL based on the subcategory
+    setImageUrl(subcategory.imageUrl); // assuming each subcategory has an imageUrl property
   };
 
   return (
@@ -20,10 +26,9 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
         <div className="dropdown-menu" style={style}>
           <div className="dropdown-content">
             <div className="image-container">
-              <img src="https://picsum.photos/id/1019/600/400" alt="PSD Mockups" />
+              <img src={imageUrl} alt="PSD Mockups" />
             </div>
             <div className="categories-container">
-              
               <div className="categories-grid">
                 {categories.map((category) => (
                   <div key={category.name}>
@@ -34,7 +39,11 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
                       <ul className="subcategories-list no-bullets">
                         {category.subcategories.map((subcategory) => (
                           <li key={subcategory.name}>
-                            <a href="#" className="subcategory-link">
+                            <a
+                              href="#"
+                              className="subcategory-link"
+                              onMouseOver={() => handleSubcategoryHover(subcategory)}
+                            >
                               {subcategory.name}
                             </a>
                           </li>

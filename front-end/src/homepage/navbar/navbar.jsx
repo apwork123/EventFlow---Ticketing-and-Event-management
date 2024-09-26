@@ -68,7 +68,7 @@ function Categories() {
           name: 'Sports',
           subcategories: [
             { name: 'Football' },
-            { name: 'Cricket' },
+            { name: 'Cricket', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Cricket.png' },
             { name: 'Basketball' },
             { name: 'Tennis' },
           ],
@@ -76,10 +76,10 @@ function Categories() {
         {
           name: 'Motorsports',
           subcategories: [
-            { name: 'Formula 1' },
-            { name: 'MotoGP' },
-            { name: 'Endurance' },
-            { name: 'Rally' },
+            { name: 'Formula 1', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Formula 1.png' },
+            { name: 'MotoGP', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/MotoGP.png' },
+            { name: 'Endurance', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Endurance.png' },
+            { name: 'Rally', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Rally.png' },
           ],
         },
         {
