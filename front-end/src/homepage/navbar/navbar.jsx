@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import styles from './navbar.module.css';
-import DropdownNav from '../../assets/Category_Dropdown/DropdownNav';
+import DropdownNav from '../Category_Dropdown/DropdownNav';
 import Dropdown from '../../assets/Dropdown';
 import Combobox from '../../assets/ComboBox/ComboboxDemo';
 import { Link } from 'react-router-dom'
