@@ -4,7 +4,7 @@ import './EventTicketsList.css';
 const tickets = [
   {
     id: 1,
-    eventName: "Summer Music Festival",
+    eventName: "Ticket 1",
     date: "2024-07-15",
     time: "14:00",
     location: "Central Park",
@@ -13,7 +13,7 @@ const tickets = [
   },
   {
     id: 2,
-    eventName: "Tech Conference 2024",
+    eventName: "Ticket 2",
     date: "2024-09-22",
     time: "09:00",
     location: "Convention Center",
@@ -22,7 +22,7 @@ const tickets = [
   },
   {
     id: 3,
-    eventName: "Comedy Night",
+    eventName: "Ticket 3",
     date: "2024-08-05",
     time: "20:00",
     location: "Laugh Factory",
@@ -31,7 +31,7 @@ const tickets = [
   },
   {
     id: 4,
-    eventName: "Food & Wine Festival",
+    eventName: "Ticket 4",
     date: "2024-10-10",
     time: "12:00",
     location: "Riverfront Park",
