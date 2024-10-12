@@ -85,10 +85,10 @@ function Categories() {
         {
           name: 'eSports',
           subcategories: [
-            { name: 'LoL' },
-            { name: 'CS2' },
-            { name: 'Valorant' },
-            { name: 'Dota 2' },
+            { name: 'LoL', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/LoL.jpg' },
+            { name: 'CS2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/CS2.jpg' },
+            { name: 'Valorant', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Valorant.jpg'  },
+            { name: 'Dota 2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Dota2.png' },
           ],
         },
       ],

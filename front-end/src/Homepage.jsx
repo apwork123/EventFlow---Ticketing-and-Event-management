@@ -17,11 +17,12 @@ export default function Homepage() {
       
       <div style={{ display: 'flex',
         justifyContent: 'center',
+        paddingBottom: '2rem'
       }}>
           <SearchBar  />
       </div>
       
-      <div>
+      <div style={{paddingBottom: '3rem'}}>
         <h2 style={{display: 'flex'
           ,justifyContent: 'center',
           marginRight: '60%',
@@ -31,7 +32,7 @@ export default function Homepage() {
       </div>
       
 
-      <div>
+      <div style={{paddingBottom: '3rem'}}> 
       <h2 style={{display: 'flex'
           ,justifyContent: 'center',
           marginRight: '60%',
@@ -39,8 +40,10 @@ export default function Homepage() {
         }}> Trending in your City </h2>
         <Carousel images={images} interval={5000} />
       </div>
-
-      <Footer />
+      
+      <div>
+        <Footer />
+      </div>
     </>
   )
 }
