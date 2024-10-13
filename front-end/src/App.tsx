@@ -6,7 +6,7 @@ import {
 
 import LoginPage from  "./login_page/LoginPage";
 
-import Homepage from './Homepage';
+import Homepage from './homepage/Homepage';
 import Event_Page from "./Event_Page/Event_Page";
 import Eventpagetest from "./Event_Page/Event-page-test";
 import EventOrganizerDashboard from "./event-organizer-dashboard/event-organizer-dashboard";

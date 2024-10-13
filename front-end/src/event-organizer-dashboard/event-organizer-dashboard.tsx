@@ -1,9 +1,9 @@
-
+import './event-organizer-dashboard.css'
 import { useState } from "react"
 import { Bell, Calendar, ChevronDown, Menu, Plus, Settings, Users } from "lucide-react"
 import { Bar, BarChart, Line, LineChart, ResponsiveContainer } from "recharts"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from  "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
