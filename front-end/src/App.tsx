@@ -9,6 +9,8 @@ import LoginPage from  "./login_page/LoginPage";
 import Homepage from './Homepage';
 import Event_Page from "./Event_Page/Event_Page";
 import Eventpagetest from "./Event_Page/Event-page-test";
+import EventOrganizerDashboard from "./event-organizer-dashboard/event-organizer-dashboard";
+
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
     path: "/event_page",
     element: <Eventpagetest />
 
+  },
+  {
+    path: "/org_dash",
+    element: <EventOrganizerDashboard />
   }
 ]);
 
