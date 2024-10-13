@@ -1,8 +1,8 @@
-import Navbar from './homepage/navbar/navbar.jsx'
-import  Footer from './homepage/footer/footer.jsx'
-import Carousel from './assets/AutoCarousel/Carousel.jsx'
-import SearchBar from './homepage/SearchBar/SearchBar.jsx'
-import ComboboxDemo from './assets/ComboBox/ComboboxDemo.jsx'
+import Navbar from './homepage/navbar/navbar'
+import  Footer from './homepage/footer/footer'
+import Carousel from './assets/AutoCarousel/Carousel'
+import SearchBar from './homepage/SearchBar/SearchBar'
+import ComboboxDemo from './assets/ComboBox/ComboboxDemo'
 import React from 'react'
 
 export default function Homepage() {
