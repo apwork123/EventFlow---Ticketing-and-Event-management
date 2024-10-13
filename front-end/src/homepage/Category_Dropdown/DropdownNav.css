@@ -45,14 +45,15 @@
   .image-container {
     flex-shrink: 0;
     width: 17rem;
-    
+    height: 180px;
+    overflow: hidden;
     margin-right: 1.5rem;
   }
   
   .image-container img {
     width: 100%;
-    
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
   }
   
   .categories-container {

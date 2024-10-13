@@ -23,8 +23,10 @@ export default function Homepage() {
       </div>
       
       <div style={{paddingBottom: '3rem'}}>
-        <h2 style={{display: 'flex'
-          ,justifyContent: 'center',
+        <h2 style={{display: 'flex',
+          fontSize: '1.5rem',
+          fontWeight: '1.4rem',
+          justifyContent: 'center',
           marginRight: '60%',
           color: '#e2effd'
         }}> Hottest Events Right Now </h2>
@@ -33,8 +35,10 @@ export default function Homepage() {
       
 
       <div style={{paddingBottom: '3rem'}}> 
-      <h2 style={{display: 'flex'
-          ,justifyContent: 'center',
+      <h2 style={{display: 'flex',
+          fontSize: '1.5rem',
+          fontWeight: '1.4rem',
+          justifyContent: 'center',
           marginRight: '60%',
           color: '#e2effd'
         }}> Trending in your City </h2>

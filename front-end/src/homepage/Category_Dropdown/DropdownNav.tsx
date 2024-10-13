@@ -1,7 +1,27 @@
 import React, { useState } from 'react';
 import './DropdownNav.css';
 
-const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
+interface Category {
+  name: string;
+  subcategories?: Subcategory[];
+}
+
+interface Subcategory {
+  name: string;
+  imageUrl: string;
+}
+
+const DropdownNav = ({
+  label,
+  style,
+  categories,
+  onMouseLeave,
+}: {
+  label: string;
+  style: React.CSSProperties;
+  categories: Category[];
+  onMouseLeave?: () => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState('../../../public/Homepage_Images/ImageIcon.png'); // default image URL
 
@@ -12,7 +32,7 @@ const DropdownNav = ({ label, style, categories, onMouseLeave }) => {
     }
   };
 
-  const handleSubcategoryHover = (subcategory) => {
+  const handleSubcategoryHover = (subcategory: Subcategory) => {
     // update the image URL based on the subcategory
     setImageUrl(subcategory.imageUrl); // assuming each subcategory has an imageUrl property
   };

@@ -37,7 +37,7 @@ export default function EventOrganizerDashboard() {
       {/* Sidebar */}
       <aside className={`bg-white w-64 min-h-screen flex flex-col transition-all duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 fixed lg:relative z-50`}>
         <div className="flex items-center justify-between p-4 border-b">
-          <h1 className="text-xl font-bold">EventMaster</h1>
+          <h1 className="text-xl font-bold">EventFlow</h1>
           <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(false)} className="lg:hidden">
             <Menu className="h-6 w-6" />
           </Button>

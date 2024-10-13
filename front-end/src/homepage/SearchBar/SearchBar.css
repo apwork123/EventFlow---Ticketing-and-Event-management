@@ -89,7 +89,7 @@
 
 .calendar {
   padding: 8px;
-  width: 240px;
+  width: max-content;
 }
 
 .calendar table {
