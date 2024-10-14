@@ -62,7 +62,7 @@
   width: 200px;
   background-color: #1f2937;
   color: #e2effd;
-  
+  border-radius: 7px;
   border-top: none;
   z-index: 1000;
 }

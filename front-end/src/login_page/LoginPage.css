@@ -7,24 +7,19 @@
 }
 
 .login-form {
-  background-color: #01060e;
+  background-color: #1f2937;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 3px 20px 3px #b02cf2;
+  box-shadow: 0px 3px 20px 3px #000000;
   width: 100%;
   max-width: 400px;
 }
 
-h2 {
+.h2-style {
   text-align: center;
+  font-size: 2rem;
   color: #e2effd;
   margin-bottom: 0.5rem;
-}
-
-p {
-  text-align: center;
-  color: #e2effd;
-  margin-bottom: 1.5rem;
 }
 
 .form-group {

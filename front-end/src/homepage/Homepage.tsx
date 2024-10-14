@@ -2,8 +2,7 @@ import Navbar from './navbar/navbar'
 import  Footer from './footer/footer'
 import Carousel from '../assets/AutoCarousel/Carousel'
 import SearchBar from './SearchBar/SearchBar'
-import ComboboxDemo from '../assets/ComboBox/ComboboxDemo'
-import React from 'react'
+
 
 export default function Homepage() {
   const images = [
@@ -45,7 +44,7 @@ export default function Homepage() {
         <Carousel images={images} interval={5000} />
       </div>
       
-      <div>
+      <div style={{backgroundColor: '#1f2937'}}>
         <Footer />
       </div>
     </>

@@ -5,7 +5,8 @@
     padding: 1.25rem; /* 20px */
     background-color: #1f2937;
     margin-bottom:  3rem;
-
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
 
   /* Header */

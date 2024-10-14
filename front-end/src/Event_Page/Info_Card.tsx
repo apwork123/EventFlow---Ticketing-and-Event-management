@@ -16,11 +16,11 @@ function Info_Card(props: Props) {
 
   return (
   <>
-    <Card style={{ width: '18rem', backgroundColor: 'white', color: 'black', border: '4px solid white', borderRadius: '7px' }}>
+    <Card style={{ width: '18rem', backgroundColor: '#1f2937', color: 'black', padding: '10px',border: '2px solid black', borderRadius: '7px' }}>
       <Card.Body>
         <img src={props.imageUrl} />
         <div style={{marginBottom: '10px'}}>
-          <Card.Title style={{fontSize: '30px'}}>Event/Artist  Name</Card.Title>
+          <Card.Title style={{fontSize: '30px', color: 'white'}}>Event/Artist  Name</Card.Title>
         </div>
         <div style={{display: 'flex',
           justifyContent: 'center'
@@ -30,7 +30,7 @@ function Info_Card(props: Props) {
         <div style={{marginTop: '10px'}}>
           <Card.Subtitle style={{ color: 'gray', fontSize: '14px' }}>Genre/Category..etc.</Card.Subtitle>
         </div>
-        <Card.Text style={{ color: 'black' }}>
+        <Card.Text style={{ color: 'white' }}>
           This contains general information about the artist or the event.
         </Card.Text>
         {!isExpanded && (
@@ -40,7 +40,7 @@ function Info_Card(props: Props) {
         )}
         {isExpanded && (
           <div>
-            <Card.Text style={{ color: 'black' }}>
+            <Card.Text style={{ color: 'white' }}>
               This is the additional content that will be shown when the card is expanded.
             </Card.Text>
             <Card.Text style={{ color: 'grey', cursor: 'pointer' }} onClick={handleReadMoreClick}>
