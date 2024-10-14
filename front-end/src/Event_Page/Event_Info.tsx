@@ -1,6 +1,9 @@
-import React from 'react'
+interface EventInfoProps {
+  imageUrl: string;
+  eventName: string;
+}
 
-export default function Event_Info(props) {
+export default function Event_Info(props: EventInfoProps) {
   return (
     <div style={{
       position: 'relative', // Add relative positioning to the parent container
@@ -17,6 +20,7 @@ export default function Event_Info(props) {
         width: `calc(100% - 3rem)`, // Subtract 3rem from the width
         textAlign: 'start',
         color: 'white',
+        fontSize: '2rem'
       }}>
         Event Name
       </h1>

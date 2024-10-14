@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import FollowButton from './FollowButton/FollowButton';
-function Info_Card(props) {
+
+interface Props {
+  imageUrl: string;
+}
+
+
+function Info_Card(props: Props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleReadMoreClick = () => {
