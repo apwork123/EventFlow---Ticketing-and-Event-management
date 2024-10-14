@@ -46,7 +46,7 @@ const DropdownNav = ({
         <div className="dropdown-menu" style={style}>
           <div className="dropdown-content">
             <div className="image-container">
-              <img src={imageUrl} alt="PSD Mockups" />
+              <img src={imageUrl} alt="" />
             </div>
             <div className="categories-container">
               <div className="categories-grid">

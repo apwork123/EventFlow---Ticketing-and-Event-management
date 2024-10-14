@@ -42,7 +42,7 @@ function Header() {
                 buttonText="Login"
                 options={[
                  { label: 'Login', onClick: () => window.location.href = '/login' },
-                 { label: 'Login (Organizer)', onClick: () => window.location.href = '/org_dash' },
+                 { label: 'Login (Organizer)', onClick: () => window.location.href = '/login' },
                  ]}
               />
       

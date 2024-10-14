@@ -16,7 +16,7 @@ export default function Homepage() {
       
       <div style={{ display: 'flex',
         justifyContent: 'center',
-        paddingBottom: '2rem'
+        paddingBottom: '3.5rem'
       }}>
           <SearchBar  />
       </div>
