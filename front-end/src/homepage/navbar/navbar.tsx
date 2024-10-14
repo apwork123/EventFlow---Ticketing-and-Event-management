@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import React from 'react';
 import styles from './navbar.module.css';
 import DropdownNav from '../Category_Dropdown/DropdownNav';
-import Dropdown from '../../assets/Dropdown';
-import Combobox from '../../assets/ComboBox/ComboboxDemo';
-import { Link } from 'react-router-dom'
+import Dropdown from '../../assets/Dropdown'
+
 
 function Navbar() {
   return (
@@ -41,16 +38,16 @@ function Header() {
               e.stopPropagation();
             }}>
               <span>
-              <Dropdown 
-                buttonText="Login" 
+              <Dropdown
+                buttonText="Login"
                 options={[
-                <Link to="/login">Login</Link>,
-                <Link to="/login-manager">Login (Manager)</Link>,
-                ]}
-        onClick={(e) => e.stopPropagation()}
-      />
-    </span>
-            </a>
+                 { label: 'Login', onClick: () => window.location.href = '/login' },
+                 { label: 'Login (Organizer)', onClick: () => window.location.href = '/org_dash' },
+                 ]}
+              />
+      
+              </span>
+             </a>
           </li>
           <li><img src="" alt="User Icon" /></li>
         </ul>
