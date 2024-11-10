@@ -130,15 +130,14 @@ export default function SubcategoryLandingPage() {
                   {event.isLive && (
                     <span className="bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE</span>
                   )}
-                  <div className="mt-4 flex justify-between items-center">
+                  <div className="mt-4">
+                    <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded w-full">
+                      Buy Tickets
+                    </button>
                     <button
                       onClick={() => openModal(event)}
-                      className="text-blue-600 hover:text-blue-800"
-                    >
+                      className="mt-2 text-blue-600 hover:text-blue-800 w-full">
                       More Details
-                    </button>
-                    <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
-                      Buy Tickets
                     </button>
                   </div>
                 </div>
@@ -153,8 +152,8 @@ export default function SubcategoryLandingPage() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Upcoming Events */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
-            <ul className="space-y-2">
+            <h2 className="text-2xl text-white font-bold mb-4">Upcoming Events</h2>
+            <ul className="text-white space-y-2">
               {events.filter(event => !event.isLive).slice(0, 3).map(event => (
                 <li key={event.id} className="flex justify-between items-center">
                   <span>{event.title}</span>
@@ -166,7 +165,7 @@ export default function SubcategoryLandingPage() {
 
           {/* Related Categories */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Related Categories</h2>
+            <h2 className="text-2xl text-white font-bold mb-4">Related Categories</h2>
             <ul className="space-y-2">
               {relatedCategories.map((category) => (
                 <li key={category}>
