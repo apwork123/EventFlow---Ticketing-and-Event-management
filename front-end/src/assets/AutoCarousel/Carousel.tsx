@@ -1,8 +1,8 @@
-import  { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './Carousel.module.css';
 
 interface CarouselProps {
-  images: string[]; // Add type annotation for images prop
+  images: string[];
   interval?: number;
 }
 
@@ -15,18 +15,24 @@ export default function Carousel({ images, interval = 3000 }: CarouselProps) {
     );
   }, [images.length]);
 
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  }, [images.length]);
+
   useEffect(() => {
     const timer = setInterval(nextSlide, interval);
     return () => clearInterval(timer);
   }, [nextSlide, interval]);
 
-  const goToSlide = (index: number) => { // Add type annotation for index parameter
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
   return (
     <div className={styles.carousel}>
-      {images.map((image: string, index: number) => ( // Add type annotations for image and index
+      {images.map((image: string, index: number) => (
         <div
           key={index}
           className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
@@ -35,7 +41,7 @@ export default function Carousel({ images, interval = 3000 }: CarouselProps) {
         </div>
       ))}
       <div className={styles.indicators}>
-        {images.map((_: string, index: number) => ( // Add type annotations for _ (image) and index
+        {images.map((_: string, index: number) => (
           <button
             key={index}
             className={`${styles.indicator} ${index === currentIndex ? styles.active : ''}`}
@@ -43,6 +49,9 @@ export default function Carousel({ images, interval = 3000 }: CarouselProps) {
           />
         ))}
       </div>
+      {/* Arrow Buttons */}
+      <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
+      <button className={styles.next} onClick={nextSlide}>&#10095;</button>
     </div>
   );
 }
