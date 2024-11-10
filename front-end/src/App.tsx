@@ -1,46 +1,47 @@
+// src/App.tsx
+
+import React from 'react';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-import LoginPage from  "./login_page/LoginPage";
-
+import EventsList from './components/eventsList.js';
+import LoginPage from "./login_page/LoginPage";
 import Homepage from './homepage/Homepage';
 import Eventpagetest from "./Event_Page/Event-page-test";
 import EventOrganizerDashboard from "./event-organizer-dashboard/event-organizer-dashboard";
-import SubcategoryLandingPage from "./subcategory page/subcategory-landing-page";
-
+import SubcategoryLandingPage from "./subcategory page/subcategory-landing-page';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Homepage  />,
-
+    element: (
+      <div className="App">
+        <h1>Event List</h1>
+        <EventsList />
+      </div>
+    ),
   },
   {
-    path:  "/login",
-    element: <LoginPage />
-
+    path: "/login",
+    element: <LoginPage />,
   },
   {
     path: "/event_page",
-    element: <Eventpagetest />
-
+    element: <Eventpagetest />,
   },
   {
     path: "/org_dash",
-    element: <EventOrganizerDashboard />
+    element: <EventOrganizerDashboard />,
   },
   {
     path: "/sub",
-    element: <SubcategoryLandingPage />
-  }
+    element: <SubcategoryLandingPage />,
+  },
 ]);
 
-export default function App() {
-  return (
-    
-      <RouterProvider router = {router} />
-    
-  );
-}
+const App: React.FC = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;
