@@ -1,41 +1,45 @@
 'use client'
 
-import { useState } from 'react'
-import CustomImage from '../assets/CustomImage'
-import { Menu, Transition, Dialog } from '@headlessui/react'
-import { ChevronDownIcon, XIcon, CalendarIcon } from 'lucide-react'
+import { useLocation } from 'react-router-dom'; // Import useLocation to access the URL
+import { useState } from 'react';
+import CustomImage from '../assets/CustomImage';
+import { Menu, Transition, Dialog } from '@headlessui/react';
+import { ChevronDownIcon, XIcon, CalendarIcon } from 'lucide-react';
 
 // Mock data
 const events = [
-  { id: 1, title: 'F1 Monaco Grand Prix', category: 'Motorsports', date: '2023-05-28', time: '14:00', location: 'Monaco', thumbnail: '/placeholder.svg?height=200&width=300', isLive: true },
+  { id: 1, title: 'F1 Monaco Grand Prix', category: 'Formula 1', date: '2023-05-28', time: '14:00', location: 'Monaco', thumbnail: '/placeholder.svg?height=200&width=300', isLive: true },
   { id: 2, title: 'UEFA Champions League Final', category: 'Football', date: '2023-06-10', time: '20:00', location: 'Istanbul', thumbnail: '/placeholder.svg?height=200&width=300', isLive: false },
   { id: 3, title: 'Wimbledon', category: 'Tennis', date: '2023-07-03', time: '12:00', location: 'London', thumbnail: '/placeholder.svg?height=200&width=300', isLive: false },
   { id: 4, title: 'NBA Finals Game 1', category: 'Basketball', date: '2023-06-01', time: '21:00', location: 'Boston', thumbnail: '/placeholder.svg?height=200&width=300', isLive: true },
   { id: 5, title: 'Tour de France Stage 1', category: 'Cycling', date: '2023-07-01', time: '10:00', location: 'Bilbao', thumbnail: '/placeholder.svg?height=200&width=300', isLive: false },
   { id: 6, title: 'Super Bowl LVIII', category: 'American Football', date: '2024-02-11', time: '18:30', location: 'Las Vegas', thumbnail: '/placeholder.svg?height=200&width=300', isLive: false },
-]
+];
 
-const relatedCategories = ['Rally', 'Drag Racing', 'NASCAR']
+const relatedCategories = ['Rally', 'Drag Racing', 'NASCAR'];
 
-export default function SubcategoryLandingPage({ subcategory = "Motorsports" }) {
-  const [sortBy, setSortBy] = useState('popularity')
-  const [selectedDate, setSelectedDate] = useState('')
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedEvent, setSelectedEvent] = useState(null)
+export default function SubcategoryLandingPage() {
+  const location = useLocation(); // Access the location object to get the URL
+  const queryParams = new URLSearchParams(location.search); // Create a URLSearchParams object
+  const subcategory = queryParams.get('subcategory') || "Motorsports"; // Get the subcategory from the URL or default to "Motorsports"
 
-  const liveEventsCount = events.filter(event => event.isLive).length
+  const [sortBy, setSortBy] = useState('popularity');
+  const [selectedDate, setSelectedDate] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const liveEventsCount = events.filter(event => event.isLive).length;
 
   const openModal = (event) => {
-    setSelectedEvent(event)
-    setIsModalOpen(true)
-  }
+    setSelectedEvent(event);
+    setIsModalOpen(true);
+  };
 
-  const filteredEvents = events.filter(event => 
-    selectedDate ? event.date === selectedDate : true
-  )
+  // Filter events based on the selected subcategory
+  const filteredEvents = events.filter(event => event.category === subcategory && (selectedDate ? event.date === selectedDate : true));
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen" style={{backgroundColor: '#01060e' }}>
       {/* Hero Section */}
       <div className="relative h-96 bg-gray-900 text-white">
         <CustomImage
@@ -62,7 +66,7 @@ export default function SubcategoryLandingPage({ subcategory = "Motorsports" }) 
           <div className="flex items-center space-x-4 mb-4 sm:mb-0">
             <div className="relative">
               <input
-                type="date"
+                type ="date"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
                 className="border rounded p-2 pr-10"
@@ -107,38 +111,42 @@ export default function SubcategoryLandingPage({ subcategory = "Motorsports" }) 
 
         {/* Events Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event) => (
-            <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <CustomImage
-                src={event.thumbnail}
-                alt={event.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                <p className="text-sm text-gray-600 mb-2">{event.category}</p>
-                <p className="text-sm mb-2">
-                  {event.date} at {event.time} • {event.location}
-                </p>
-                {event.isLive && (
-                  <span className="bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE</span>
-                )}
-                <div className="mt-4 flex justify-between items-center">
-                  <button
-                    onClick={() => openModal(event)}
-                    className="text-blue-600 hover:text-blue-800"
-                  >
-                    More Details
-                  </button>
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
-                    Buy Tickets
-                  </button>
+          {filteredEvents.length > 0 ? (
+            filteredEvents.map((event) => (
+              <div key={event.id} className="rounded-lg shadow-md overflow-hidden" style={{ backgroundColor: '#1f2937'}}>
+                <CustomImage
+                  src={event.thumbnail}
+                  alt={event.title}
+                  width={300}
+                  height={200}
+                  className="w-full text-white h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl text-white font-semibold mb-2">{event.title}</h3>
+                  <p className="text-sm text-white mb-2">{event.category}</p>
+                  <p className="text-sm text-white mb-2">
+                    {event.date} at {event.time} • {event.location}
+                  </p>
+                  {event.isLive && (
+                    <span className="bg-red-600 text-white text-xs px-2 py-1 rounded-full">LIVE</span>
+                  )}
+                  <div className="mt-4 flex justify-between items-center">
+                    <button
+                      onClick={() => openModal(event)}
+                      className="text-blue-600 hover:text-blue-800"
+                    >
+                      More Details
+                    </button>
+                    <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+                      Buy Tickets
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No events found for this subcategory.</p>
+          )}
         </div>
 
         {/* Additional Sections */}
@@ -160,7 +168,7 @@ export default function SubcategoryLandingPage({ subcategory = "Motorsports" }) 
           <div>
             <h2 className="text-2xl font-bold mb-4">Related Categories</h2>
             <ul className="space-y-2">
-              {relatedCategories.map(category => (
+              {relatedCategories.map((category) => (
                 <li key={category}>
                   <a href="#" className="text-blue-600 hover:text-blue-800">{category}</a>
                 </li>
@@ -208,5 +216,5 @@ export default function SubcategoryLandingPage({ subcategory = "Motorsports" }) 
         </Dialog>
       </Transition>
     </div>
-  )
+  );
 }
