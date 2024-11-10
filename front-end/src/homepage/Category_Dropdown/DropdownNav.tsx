@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './DropdownNav.css';
 
 interface Category {
@@ -37,6 +38,12 @@ const DropdownNav = ({
     setImageUrl(subcategory.imageUrl); // assuming each subcategory has an imageUrl property
   };
 
+  const navigate = useNavigate();
+
+  const handleSubcategoryClick = (subcategory) => {
+    navigate(`/sub?subcategory=${subcategory.name}`); // Pass the subcategory name as a query parameter
+  };
+
   return (
     <div className="dropdown" onMouseLeave={handleMouseLeave}>
       <button className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
@@ -63,6 +70,7 @@ const DropdownNav = ({
                               href="#"
                               className="subcategory-link"
                               onMouseOver={() => handleSubcategoryHover(subcategory)}
+                              onClick={() => handleSubcategoryClick(subcategory)}
                             >
                               {subcategory.name}
                             </a>

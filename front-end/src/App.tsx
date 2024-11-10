@@ -8,6 +8,7 @@ import LoginPage from  "./login_page/LoginPage";
 import Homepage from './homepage/Homepage';
 import Eventpagetest from "./Event_Page/Event-page-test";
 import EventOrganizerDashboard from "./event-organizer-dashboard/event-organizer-dashboard";
+import SubcategoryLandingPage from "./subcategory page/subcategory-landing-page";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/org_dash",
     element: <EventOrganizerDashboard />
+  },
+  {
+    path: "/sub",
+    element: <SubcategoryLandingPage />
   }
 ]);
 

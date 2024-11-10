@@ -64,28 +64,28 @@ function Categories() {
         {
           name: 'Sports',
           subcategories: [
-            { name: 'Football' },
-            { name: 'Cricket', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Cricket.png' },
-            { name: 'Basketball' },
-            { name: 'Tennis' },
+            { name: 'Football', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Sports/Football.jpg' },
+            { name: 'Cricket', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Sports/Cricket.png' },
+            { name: 'Basketball', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Sports/Basketball.jpg' },
+            { name: 'Tennis', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Sports/Tennis.jpg' },
           ],
         },
         {
           name: 'Motorsports',
           subcategories: [
-            { name: 'Formula 1', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Formula 1.png' },
-            { name: 'MotoGP', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/MotoGP.png' },
-            { name: 'Endurance', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Endurance.png' },
-            { name: 'Rally', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Rally.png' },
+            { name: 'Formula 1', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Motorsports/Formula 1.png' },
+            { name: 'MotoGP', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Motorsports/MotoGP.png' },
+            { name: 'Endurance', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Motorsports/Endurance.png' },
+            { name: 'Rally', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Motorsports/Rally.png' },
           ],
         },
         {
           name: 'eSports',
           subcategories: [
-            { name: 'LoL', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/LoL.jpg' },
-            { name: 'CS2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/CS2.jpg' },
-            { name: 'Valorant', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Valorant.jpg'  },
-            { name: 'Dota 2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/Dota2.png' },
+            { name: 'LoL', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/E-sports/LoL.jpg' },
+            { name: 'CS2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/E-sports/CS2.jpg' },
+            { name: 'Valorant', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/E-sports/Valorant.jpg'  },
+            { name: 'Dota 2', imageUrl: '../../../public/Homepage_Images/Category Images/Sports/E-sports/Dota2.png' },
           ],
         },
       ],
@@ -94,7 +94,7 @@ function Categories() {
 
   const concertsCategories = [
     { name: 'Diljit Dosanjh' },
-    { name: 'KRSNA' },
+    { name: 'KRSNA', imageUrl: '../../../public/Homepage_Images/Category Images/Concerts/Kr$na.jpg' },
     { name: 'Hanumankind' },
     { name: 'Travis Scott' },
     // Add more concerts categories here
@@ -124,23 +124,23 @@ function Categories() {
   const realityShowsCategories = [
     
     { name: 'Award Shows', subcategories: [
-      { name: 'Filmfare Awards' },
-      { name: 'ZEE Cine Awards' },
-      { name: 'IIFA' },
-      { name: 'Stardust Awards' },
+      { name: 'Filmfare Awards', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Award Shows/Filmfare.jpg' },
+      { name: 'ZEE Cine Awards', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Award Shows/ZeeCine.jpg' },
+      { name: 'IIFA', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Award Shows/IIFA.jpg' },
+      { name: 'Stardust Awards', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Award Shows/Stardust.jpg' },
       // Add more award shows here
     ]},
     { name: 'Talent Shows', subcategories: [
-      { name: 'Comedian shows' },
-      { name: 'Dance India Dance' },
-      { name: 'Dance +' },
-      { name: 'Indian Idol' },
+      { name: 'Comedian shows', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Talent Shows/Comedy.jpg' },
+      { name: 'Dance India Dance', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Talent Shows/DanceIndiaDance.jpg' },
+      { name: 'Dance +', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Talent Shows/Danceplus.jpg' },
+      { name: 'Indian Idol', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Talent Shows/IndianIdol.jpg' },
       // Add more talent shows here
     ]},
     { name: 'Interviews', subcategories: [
-      { name: 'Movie Release' },
-      { name: 'Trailer Launch' },
-      { name: 'Movie Promotion' },
+      { name: 'Movie Release', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Interviews/MovieRelease.jpg' },
+      { name: 'Trailer Launch', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Interviews/TrailerLaunch.jpg' },
+      { name: 'Movie Promotion', imageUrl: '../../../public/Homepage_Images/Category Images/Reality Shows/Interviews/Promotion.jpg' },
       // Add more interviews here
     ]},
     // Add more reality shows categories here
@@ -148,10 +148,10 @@ function Categories() {
 
   const festivalsCategories = [
     { name: 'Religious', subcategories: [
-      { name: 'Navratri' },
-      { name: 'Ganesh Chaturthi' },
-      { name: 'Ganesh Visarjan' },
-      { name: 'Christmas' },
+      { name: 'Navratri', imageUrl: '../../../public/Homepage_Images/Category Images/Festivals/Religious/Navaratri.jpg' },
+      { name: 'Ganesh Chaturthi', imageUrl: '../../../public/Homepage_Images/Category Images/Festivals/Religious/Ganesh Chaturti.jpg' },
+      { name: 'Ganesh Visarjan', imageUrl: '../../../public/Homepage_Images/Category Images/Festivals/Religious/Ganesh Visarjan.jpg' },
+      { name: 'Christmas', imageUrl: '../../../public/Homepage_Images/Category Images/Festivals/Religious/Christmas.jpg' },
       // Add more religious festivals here
     ]},
     // Add more festivals categories here
