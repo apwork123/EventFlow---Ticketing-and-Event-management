@@ -12,7 +12,7 @@ A event website for ticket booking for users and dashboard for event organizers.
 Clone the repository and switch to main branch:
 
 ```bash
-git clone https://github.com/apwork123/FSD_Mini_Project.git
+git clone https://github.com/apwork123/EventFlow---Ticketing-and-Event-management
 ```
 
 ```bash
